@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAMY - The Best Pen</title>
+    <style>
+        /* 全局样式 */
+        body{
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* 顶部栏样式 */
+        header{
+            background-color: #000;
+            color: #fff;
+        }
+
+        .top{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+
+        .logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 30px;
+        }
+
+        ul {
+            list-style: none;
+            display: flex;
+            width: 100%;
+            justify-content: space-around;
+        }
+
+        ul li {
+            margin-left: 0;
+        }
+
+        ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .main-banner {
+            text-align: center;
+            padding: 50px 0;
+            background-color: #000;
+            color: #fff;
+            height: 400px;
+        }
+
+        .main-banner img {
+            max-width: none;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* 欢迎部分样式 */
+        .welcome {
+            text-align: center;
+            padding: 50px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .welcome h2 {
+            margin-bottom: 20px;
+        }
+
+        .welcome-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .welcome-content p {
+            width: 40%;
+            margin-right: 20px;
+            font-size: 20px;
+        }
+
+        .welcome-content img {
+            width: 40%;
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* 产品系列样式 */
+        .product-series {
+            text-align: center;
+            padding: 50px 0;
+        }
+
+        .product1{
+            display: flex;
+        align-items: center;
+        justify-content: space-between;
+        }
+        .product {
+            display: inline-block;
+            width: 300px;
+            margin: 0 20px;
+        }
+        .product-series img{
+            width: 70%;
+            height:auto;
+        }
+        /* 客户评价样式 */
+        .testimonials {
+            text-align: center;
+            padding: 50px 0;
+        }
+
+        .testimonials blockquote {
+            font-style: italic;
+        }
+
+        .testimonials img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 50%;
+        }
+
+        /* 产品展示样式 */
+        .product-display {
+            text-align: center;
+            padding: 50px 0;
+        }
+
+        .product-display img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /*新品展示样式*/
+        .product-new {
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+
+        .product-img{
+            display: flex;
+            width:100%;
+        }
+        .product-img p{
+            width:50%;
+        }
+       .product-img img{
+            width:50%;
+        }
+
+        /* 页脚样式 */
+        footer {
+            text-align: center;
+            background-color: #f4f4f4;
+        }
+        footer img{
+            width:100%;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 顶部栏 -->
+    <header>
+        <div class="top">
+            <div class="logo">
+                <img src="c:\Users\Lenovo\Pictures\联想截图\联想截图_20241126120548.png" alt="LAMY Logo">
+            </div>
+                <ul>
+                    <li>新品推荐</li>
+                    <li>在线购买产品</li>
+                    <li>企业礼包</li>
+                    <li>品牌介绍</li>
+                </ul>
+        </div>
+    </header>
+    <section class="main-banner">
+        <img src="c:\Users\Lenovo\Pictures\联想截图\联想截图_20241126130708.png" alt="LAMY Pens">
+    </section>
+    <!-- 欢迎部分 -->
+    <section class="welcome">
+        <h2>Welcome to Lamy</h2>
+        <div class="welcome-content">
+            <img src="c:\Users\Lenovo\Pictures\联想截图\联想截图_20241126125447.png" alt="Handwriting with LAMY pen">
+                <p>德国书写工具品牌LAMY始创人C•Josef Lamy于1930年在海德堡创立了欧瑟斯墨水笔制造厂.1952年，崭露头角的LAMY流线型墨水笔，震撼问世，彰显公司的创新敏锐触觉。1966年终于打造出令人耳目一新的现代经典之作-
+                LAMY2000系列。产品撮合了聚碳酸酯与不锈钢材质，绝妙的配搭，使之从芸芸众生的书写工具中脱颖而出，时至今日，依然在市场具有影响力。</p>
+        </div>
+    </section>
+    <!-- 产品系列 -->
+    <section class="product-series">
+        <h2>LAMY各系列</h2>
+        <div class="product1">
+        <div class="product">
+                <h3>恒星系列墨水笔</h3>
+                    <p>LAMY恒星系列延续了LAMY的时尚造型，打造出锦上添花的极致品质。此系列全部均有氧化独特的凹陷式笔墨以及弹性铜线笔夹富的颜色让LAMY恒星系列突破了传统散发着无限的青春魅力。</p>
+        </div>
+        <div class="product">
+                <h3>狩猎系列磨砂黑墨水笔</3>
+                    <p>色彩丰富，颜色亮丽，不仅是可以作为书写工具，同样是很好的装饰品。宽大的笔夹设计，可随时夹在包带、牛仔裤、T恤袖口上，让您感受创意方便的携带方式。笔身通体材质采用车用强力ABS材料</p>
+        </div>
+        <div class="product">
+            <h3>喜悦系列美术笔</3>
+                <p>用以绘图、写艺术字、艺术签名。扁平状的笔尖设计，适合书写艺术字。
+                    立体感极佳.1、1.5、1.9三种笔尖可供选择，可书写粗细不等的立体字，让您随时感受变化的乐趣复古的笔杆设计，经典又与众不同，显示出独特的欣赏品味
+                </p>
+        </div>
+        </div>
+        <div>
+            <a href="#">了解详情</a>
+        </div>
+            <img src="c:\Users\Lenovo\Pictures\联想截图\联想截图_20241126134805.png" alt="LAMY go">
+    </section>
+    <!-- 客户评价 -->
+    <section class="testimonials">
+        <h2>From Germany</h2>
+        <p>What people are saying?</p>
+        <img src="c:\Users\Lenovo\Pictures\联想截图\联想截图_20241126142549.png" alt="Customer photo">
+    </section>
+    <!-- 产品展示 -->
+    <section class="product-display">
+        <h2>Our products</h2>
+        <img src="c:\Users\Lenovo\Pictures\联想截图\联想截图_20241126144001.png" alt="LAMY products grid">
+        <div>
+            <a href="#">戳我速购</a>
+        </div>
+    </section>
+    <!--新品展示-->
+    <section class="product new">
+        <div class="product-img">
+            <img src="c:\Users\Lenovo\Pictures\联想截图\联想截图_20241126150203.png" alt="Pen 1"><span>You make millions of decisions that is mean nothing, and then one day your order takes out life.</span>
+        </div>
+        <div class="product-img">
+            <img src="c:\Users\Lenovo\Pictures\联想截图\联想截图_20241126193113.png" alt="Pen 2"><span>It's sad when you realize you aren't as important to someone as you thought you were.</span>
+        </div>
+        <div class="product-img" >
+            <img src="c:\Users\Lenovo\Pictures\联想截图\联想截图_20241126193137.png" alt="Pen 3"><span>Love is unequal, so don't count how much one contributes, and which is more active.</span>
+        </div>
+        <div>
+            <a href="#">新品推荐</a>
+        </div>
+    </section>
+    
+    <!-- 页脚 -->
+    <footer>
+        <img src="c:\Users\Lenovo\Pictures\联想截图\联想截图_20241126195414.png" alt="end">
+    </footer>
+</body>
+>
+</html>
