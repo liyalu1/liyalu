@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 全局样式 */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans - serif;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin:0 auto;
+            padding:20px;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space - between;
+            align-items: center;
+            background-color: #f0f0f0;
+            padding: 10px 20px;
+        }
+
+
+        .tabs {
+      display: flex;
+      width: 80%;
+      border-bottom: 1px solid #ccc;
+    }
+
+   .tab {
+      flex: 1;
+      text-align: center;
+      padding: 8px 0;
+      cursor: pointer;
+    }
+
+        .user-avatar {
+            width:40px;
+            height:40px;
+            border-radius:50%;
+        }
+
+        /* 邮件列表样式 */
+        .mail-list {
+            margin-top: 20px;
+        }
+
+        .mail-list h2 {
+            margin-bottom: 10px;
+        }
+
+        .mail-item {
+            display: flex;
+            justify-content: space - between;
+            align-items: center;
+            background-color: #d1d9e9;
+            border: 1px solid #e0e0e0;
+            padding: 10px 20px;
+            margin-bottom: 10px;
+}
+
+        .mail-item.icon {
+            font-size: 20px;
+            margin-right: 10px;
+        }
+
+        .mail-item.content {
+            flex: 1;
+        }
+
+        .mail-item.date {
+            text-align: right;
+        }
+
+        .mail-item.actions {
+            display: flex;
+        }
+
+        .mail-item.actions button {
+            margin-left: 5px;
+            padding: 5px 10px;
+            border: none;
+            background-color: #f0f0f0;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <div class="logo">欢迎回来</div>
+            <div class="tabs">
+                <span class="tab active">今日</span>
+                <span class="tab">讯息</span>
+                <span class="tab">服务</span>
+                <span class="tab">校园</span>
+                <span class="tab">我的</span>
+            </div>
+            <img src="c:\Users\Lenovo\Pictures\联想截图\195.png" alt="用户头像" class="user - avatar">
+        </nav>
+        <!-- 邮件列表 -->
+        <div class="mail - list">
+            <h2>邮箱动态 - 收件箱</h2>
+            <div class="mail-item">
+                <img src="c:\Users\Lenovo\Pictures\联想截图\47.png"alt="邮件图标">
+                <div class="content">
+                    <p>邮件摘要信息......</p>
+                </div>
+                <div class="date">2024.2.20</div>
+                <div class="actions">
+                    <button>删除</button>
+                    <button>回复</button>
+                </div>
+            </div>
+            <div class="mail-item">
+                <img src="c:\Users\Lenovo\Pictures\217.png" alt="邮件图标">
+                <div class="content">
+                    <p>邮件摘要信息......</p>
+                </div>
+                <div class="date">2024.2.20</div>
+                <div class="actions">
+                    <button>删除</button>
+                    <button>回复</button>
+                </div>
+            </div>
+            <div class="mail-item">
+                <img src="c:\Users\Lenovo\Pictures\联想截图\204.png" alt="邮件图标">
+                <div class="content">
+                    <p>邮件摘要信息......</p>
+                </div>
+                <div class="date">2024.2.20</div>
+                <div class="actions">
+                    <button>删除</button>
+                    <button>回复</button>
+                </div>
+            </div>
+            <a href="#">去写信</a>
+        </div>
+    </div>
+</body>
+
+</html>
