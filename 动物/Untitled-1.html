@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animal Photography</title>
+    <style>
+        /* 全局样式 */
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* 顶部图片和标题 */
+        .top-section {
+            position: relative;
+        }
+
+        .top-section img {
+            width: 100%;
+            height: auto;
+        }
+
+        .title h1{
+            position: absolute;
+            top: 30%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color:darkgreen;
+            font-size:50px ;
+        }
+        .title h2{
+           position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color:darkgreen;
+            font-size: 30px;
+        }
+       .top-section button {
+            margin-bottom: 20px;
+            background-color: rgb(4, 69, 4);
+             position: absolute;
+            top: 80%;
+            left: 30%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            font-size: 30px;
+        }
+
+        /* 探索按钮和图片网格 */
+        .explore-section {
+            text-align: center;
+            padding: 50px;
+        }
+
+        .image-grid {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .image-grid img {
+            transition: transform 3s;
+           margin-right: 2px;
+        }
+        .image-grid img:hover{
+            transform:translateY(-50px);
+        }
+
+        /* 注册按钮和描述 */
+        .signup-section {
+            justify-content: center;
+            position: relative;
+            display: flex;
+            align-items: center;
+            padding-top: 20px;
+        }
+        .signup-section img {
+            width: 100%;
+            height: auto;
+        }
+        .signup-text
+        {
+            position: absolute;
+            text-align: center;
+            background-color: rgb(182, 182, 182); 
+            padding: 20px;
+            width: 550px;
+            height: 430px;
+            top:-2%;
+            transition: transform 3s;
+        }
+        .signup-text:hover{
+             transform:translateY(-30px);
+        }
+        
+        .signup-text p{
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .signup-section button{
+            margin-bottom: 20px;
+            background-color: rgb(4, 69, 4);
+             position: absolute;
+            text-align: center;
+            top: 65%;
+            font-size: 40px;
+            transition: transform 1s;
+        }
+        .signup-section button:hover{
+            transform: scale(0.9);
+        }
+        
+
+        /* 不同动物的故事 */
+        .difference-section{
+            text-align: center;
+        }
+        h3.animated-title {
+            position: relative;
+            width: 220px;
+            height: 40px;
+            font-size: 40px;
+            text-align: center;
+            
+        }
+
+        h3.animated-title::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 4px solid transparent;
+            border-radius: 5px;
+            animation: border-animation 5s linear infinite;
+            animation-play-state: paused;
+        }
+
+        h3.animated-title:hover::before {
+            animation-play-state: running;
+        }
+
+        @keyframes border-animation {
+            0% {
+                border-top-color:transparent;
+                border-right-color: transparent;
+                border-bottom-color: transparent;
+                border-left-color: transparent;
+            }
+
+            25% {
+                border-top-color: transparent;
+                border-right-color:rgb(4, 69, 4);
+                border-bottom-color: transparent;
+                border-left-color: transparent;
+            }
+
+            50% {
+                border-top-color: transparent;
+                border-right-color: transparent;
+                border-bottom-color:rgb(4, 69, 4);
+                border-left-color: transparent;
+            }
+
+            75% {
+                border-top-color: transparent;
+                border-right-color: transparent;
+                border-bottom-color: transparent;
+                border-left-color:rgb(4, 69, 4);
+            }
+
+            100% {
+                border-top-color:rgb(4, 69, 4);
+                border-right-color: transparent;
+                border-bottom-color: transparent;
+                border-left-color: transparent;
+            }
+        }
+        .content{
+        text-align: center;
+            display:flex;
+            flex-direction: row;
+            padding:2px;
+        }
+        .difference-section.image-grid {
+            text-align: center;
+            margin-bottom: 100px;
+            background-color: darkgrey;
+        }
+        .difference-section.image-grid img{
+            max-width: 100%;
+            height: auto;
+        }
+        .difference-scetion.image-grid img{
+            transition: transform 2s;
+        }
+        .difference-scetion.image-grid img:hover{
+            transform:translateY(-50px);
+        }
+        .difference-scetion.image-grid p{
+            margin-top: 100px;
+        }
+
+        .difference-section button {
+            margin-top: 50px;
+            font-size: 30px;
+            background-color: transparent;
+            transition: background-color 1s ease;
+        }
+        .difference-section button:hover{
+            background-color: rgb(2, 113, 2);
+        }
+
+        /* 摄影过程 */
+        .photo-process-section{
+            font-family: Arial, Helvetica, sans-serif;
+        } 
+        .photo-process-section img {
+            width: 20%;
+            height: auto;
+            padding-left: 300px;
+            padding-right: 100px;
+        }
+        .photo-process-section.content {
+            display: flex;
+            gap: 20px;
+            position: relative;
+        }
+
+        .photo-process-section.content.text {
+            position: absolute;
+            left:70%;
+            padding-right: 300px;
+        }
+        .text h3{
+            font-size: 40px;
+            transition: transform 2s;
+        }
+        .text h3:hover{
+            transform:translateY(-30px);
+        }
+        .text p{
+            padding-right: 100px;
+            padding-left: 100px;
+            font-size: 20px;
+            transition: all 1s;
+        }
+        .text p:hover{
+            font-size: 25px;
+        }
+        .text ol{
+            padding-right: 200px;
+            padding-left: 200px;
+            padding-top: 20px;
+        }
+        .text ol li{
+            position:relative;
+            left: 0;
+            transition: left 1s ease;
+            padding-bottom: 20px;
+            font-size: 30px;
+        }
+        .text ol li:hover{
+            left:50px;
+        }
+        /* 底部链接 */
+        /* 整体容器样式 */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 100px;
+}
+
+/* 左边部分样式 */
+.left-section {
+    text-align: left;
+    padding-right: 100px;
+}
+
+.left-section h1 {
+    margin: 0;
+    font-size: 30px;
+}
+
+/* 中间部分样式 */
+.middle-section {
+    text-align: center;
+    padding-right: 200px;
+}
+
+.middle-section p {
+    margin: 0;
+    font-size: 20px;
+}
+
+/* 右边部分样式 */
+.right-section button {
+    background-color: rgb(108, 135, 61);
+    border: none;
+    padding: 15px 30px;
+    font-size: 24px;
+    cursor: pointer;
+    transition: background-color 1s ease;
+    transition: transform 1s;
+}
+.right-section button:hover{
+    background-color: rgb(221, 237, 221);
+    transform: translateY(-20px);
+}
+    </style>
+</head>
+
+<body>
+    <!-- 顶部图片和标题 -->
+    <section class="top-section">
+        <img src="c:\Users\Lenovo\Pictures\联想截图\乌龟.png" alt="Turtles on rocks">
+            <div class="title">
+                    <h1>Animal Photography</h1>
+                    <h2>A silhouette of them,a simple little acttion,here are the photographer eyes the best of them, their laughter,their love,their every vivid are by us.</h2>
+            </div>
+            <button>EXPLORE</button>
+    </section>
+
+    <!-- 探索按钮 -->
+    <section class="explore-section">
+        
+        <div class="image-grid">
+            <img src="c:\Users\Lenovo\Pictures\联想截图\火烈鸟1.png">
+                <img src="c:\Users\Lenovo\Pictures\联想截图\火烈鸟2.png" alt="Flamingos in love">
+                    <img src="c:\Users\Lenovo\Pictures\联想截图\火烈鸟3.png" alt="Flamingo standing">
+        </div>
+    </section>
+
+    <!-- 注册按钮和描述 -->
+    <section class="signup-section">
+        <img src="c:\Users\Lenovo\Pictures\联想截图\鹿.png">
+        <div class="signup-text">
+            <p>"Family Farms is the best place,where I can buy fruit,vegetable,meat,honey,milk,eggs and so on for my retaurant directlly fromoupplier.Super convinient.Thank you"xdccnfc cfvfesc cfnccnjdcn cfjdcdsr dcwwzwqg ejs dddc ddf fnfjv eij fvnv jnxzexh cncdcmdsc ddnc,cddmdcds dncdn cdcn qeoeas,dcndassasas,cdcndcnc cciqoskxm cbdcpqslwq nfnere nfncsfjjc dndcww frhfjnc qpdjweiw cnncqe,cqjsdc ccn dcjndc,ncf cdncjd dcdjcndq csjncq dcdncf dcdjdnc cdjsq,qkodkqe wqcnpsdc cdnqq qcw,cqnonxj dcdcnd dcnjsdvb wcnwq cowwncjq jjcnjncqnw wcq c wd cwch,cnjncnc ece cdcnncdwnc nenwc dcnnc cjcj,c cjrnc wecwc.</p>
+        </div>
+        <button>SIGN UP</button>
+    </section>
+
+    <!-- 不同动物的故事 -->
+<section class="difference-section">
+        <h3 class="animated-title">Difference</h3>
+        <div class="content">
+            <div class="image-grid">
+                <img src="c:\Users\Lenovo\Pictures\联想截图\马.png" alt="Horse">
+                <p>Horse</p>
+                <p>A difference story</p>
+            </div>
+            <div class="image-grid">
+                <img src="c:\Users\Lenovo\Pictures\联想截图\袋鼠.png" alt="Kangaroo">
+                <p>Kangaroo</p>
+                <p>A difference story</p>
+            </div>
+            <div class="image-grid">
+                <img src="c:\Users\Lenovo\Pictures\联想截图\狮子.png" alt="Lion">
+                <p>Lion</p>
+                <p>Adifference story</p>
+            </div>
+            <div class="image-grid">
+                <img src="c:\Users\Lenovo\Pictures\联想截图\小鸟.png" alt="Hummingbird">
+                <p>Hummingbird</p>
+                <p>A difference story</p>
+            </div> 
+        </div>      
+        <button>Know more</button>
+    </section>
+
+    <!-- 摄影过程 -->
+    <section class="photo-process-section">
+            <div class="content">
+                <img src="c:\Users\Lenovo\Pictures\联想截图\松鼠.png" alt="A squirrel eating">
+                <div class="text">
+                    <h3>The Photo</h3>
+                    <p>"Family Farms is the best place where I can buy fruit,vegetable,meat,honey,milk.eggs and so on for my restaurant directly from supplier.Super convenient.Thank you"</p>
+                    <ol>
+                        <li>Looking for it</li>
+                        <li>Cultivate feelings</li>
+                        <li>Shooting</li>
+                        <li>Harvest achievement</li>
+                    </ol>
+                </div>
+            </div>
+    </section>
+
+    <!-- 底部链接 -->
+    <section class="foot-section">
+        <div class="container">
+            <div class="left-section">
+                <h1>IN THE WILD</h1>
+                <h1>IN THE SEA</h1>
+            </div>
+            <div class="middle-section">
+                <p>MOER</p>
+                <p>We create art.</p>
+                <p>We create life.</p>
+            </div>
+            <div class="right-section">
+                <button>Big World</button>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
