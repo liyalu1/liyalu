@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>title</title>
+    <style>
+        p{
+            display:block;
+            margin:10px 0;
+        }
+        input{
+            margin:5px,0;
+        }
+    </style>
+</head>
+<body>
+    <p> 请输入一个字符串：</p>
+    <input type="text"id="str1">
+    <p>请输入一个子串：</p>
+    <input type="text"id="str2">
+    <input type="button"value="提交"onclick="countStr()">
+    <p>子串出现次数为：<span id="result"></span></p>
+    <script>
+        function countStr(str1, str2) {
+            var str1 = document.getElementById('str1').value;
+            var str2 = document.getElementById('str2').value;
+            let count = 0;
+            let index = 0;
+            while ((index = str1.indexOf(str2, index)) !== -1) {
+                count++;
+                index += str2.length;
+            }
+            document.getElementById('result').textContent = count;
+        }
+    </script>
+</body>
+</html>
